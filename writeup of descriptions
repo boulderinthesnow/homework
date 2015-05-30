@@ -1,0 +1,165 @@
+
+
+List and describe each of the primitive data types (number, string, boolean, null, undefined). What do they each represent?
+
+A string is a chain of 0 or more unicode chars. These are fixed primitive data types, and are always equal. For example: 
+var a = "abc"
+var b = "abc"
+a === b
+true
+
+The same goes for numbers, numbers are a primitive type that is always equal. In JS, integers and floating point values are considered to be the same thing, and no distinction is made between them.
+
+Boolean values only evaluate to two data types - true and false. They are also fixed and always equal. 
+true === true
+true
+true !== false
+true
+
+Null has only 1 data type, it is always null. A variable containing null has no valid data type of any other variety.
+
+undefined is reuturned when an object property is used but does not exist, of if a variable is used but not defined.
+
+Explain what a variable is.
+A variable is a container that contains a value, which can be reassigned.
+
+Describe in precise terms what’s happening with variable assignment using “var keyword”, “identifier”, “value”, “assign” etc…
+
+var keyword is used to declare a variable inside the scope of wherever it is defined, and can accessed in all objects within itself. 
+
+Evaluate the following expression: !(typeof(9) === typeof(9.5) && (99 == "99" || !true))
+
+the && signifies that both sides of it must eval to true for the expression to be true. On the left side, typeof9 === typeof 9.5, so that is true. The bang (!) then negates that expression, and that side evals to false. The 2nd side is never evaluated, and the expression returns false.
+
+Use a for loop to iterate through an array.
+
+arr = [1,2,3]
+for (each in arr) {
+    console.log(arr[each]);
+};
+ 1
+ 2
+ 3
+
+Define functions using declarations and expressions.
+Declarations are parsed at pre-execution stage, and can be accessed regardless of code location
+
+Function Expressions are created when the execution flow reaches them. As a consequence, Function Expressions can be used only after they are executed.
+
+Articulate the difference between defining and invoking a function.
+defining a function is where the function is designed and it’s logical flow determined. Invoking is where the function is used, and is limited by how it was defined. 
+
+Describe how data flows into a function (by passing in arguments).
+data enters the function via the arguments the function is able to take, and it exits the function via a return statement or other modifications to the console.log.
+
+Describe how data flows out of functions (by using the return keyword).
+ the return keyword returns whatever expression it is task with returning outside of the function and into the rest of the program.
+
+"Functions are just values" - explain.
+     Functions return only values, which can then be used in other places, such as other functions. 
+
+Write functions that return values.
+
+var badAssFunction = function (arr){
+    return arr.length;
+}
+
+badAssFunction([1,2,3])
+3
+
+Write functions that have side effects, such as logging to the console or manipulating DOM.
+
+var badAssFunction = function (arr){
+    console.log(arr, "WOOP WOOP");
+    return arr.length;
+
+}
+
+badAssFunction([1,2,3])
+ [1, 2, 3] "WOOP WOOP"
+3
+
+Explain the difference between locally-scoped and globally scoped variables and write examples of each.
+
+global: accesible anywhere
+local: accessible locally
+
+var foo = [1,2,3] // global
+
+var badAssFunction = function (arr){
+    console.log(arr, "WOOP WOOP");
+    var inside = "foobar" // scoped (local)
+    return arr.length;
+
+}
+
+badAssFunction([1,2,3])
+
+Define ‘type coercion’ and identify instances when it occurs.
+
+ Type coercion is where data type is modified. Below, string 51 is said to be equal to integer 51.
+
+"51" == 51
+true
+
+Explain what the DOM is. Where does it live? What is it for? How does it get created?
+
+Document object model, is the flow for a web document and determines how it is parsed. It lives in web pages. It is created based on certain parameters and locations of data.
+
+Describe the CSS Box model. What 5 properties affect the box model?
+     it determines how objects are created in css. Properties include margin, border, padding, content.
+
+What is the difference between relative and absolute poitions in CSS?
+ absolute — fixes objects at certain points on the page. Relative positioning moves things relative to their starting position.
+
+What is the difference between block and inline elements?
+
+Block elements such as h1, p, ul, and table all have spaces after them. Inline elements such as b, td, a, img and span do not.
+div defines a block level section, span defines an inline section
+
+What does each git command do? git add ., git commit -m “”, git push origin master
+ it does it things! git add will add files to get in preparation for commitment, commit m saves the file locally with a message, git push origin master send it to the remote server with the message.
+
+Git Branches: What are they? What are they used for?
+
+They are used to separate different working parts of code, primarily so different people can work on the same project at the same time.
+
+What's the difference between git and github?
+git is a version control system, git hub is a remote repository that uses git.
+
+Identify all of the truthy and falsy values in JS and explain what it means to be “truthy” and “falsy”.
+
+ booleans true and false are used as operators when programming. False, 0, “”, null, undefined, and NaN are all false. All others are truth
+
+How do you access elements inside of an array?
+array[x]
+
+What's the difference between arrays and objects?
+arrays are a special type of object where they keys are sequential numbers.
+
+How do you create arrays and objects?
+arr = []
+obj = {}
+
+How do you access values inside an object?
+by referencing the key assc with that value
+
+Describe the three components of a for loop.
+the start, the end condition and the increment step.
+
+Name three types of HTML mouse events.
+onclick, on keypress, on mousedrag
+
+What is event propagation?
+
+where events are propagated into new child events.
+
+What is npm?
+a package manager that installs stuff
+
+What are npm modules? How do you install an npm module?
+but referencing the module location through npm in terminal.
+
+Describe the execution of a while loop and the potential for infinite loops.
+
+executes until a condition is met. No possible end condition exists, it goes forever.
